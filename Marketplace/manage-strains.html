@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Strains</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <div class="menu-icon" onclick="toggleMenu()">☰</div>
+            <div class="search-bar">
+                <input type="text" id="search-bar" placeholder="Search strains..." oninput="searchStrains()">
+            </div>
+            <div class="cart-icon" onclick="viewCart()">🛒</div>
+        </div>
+        <nav id="menu" class="menu">
+            <ul>
+                <li onclick="viewAccount()">Account</li>
+                <li onclick="viewCart()">Shopping Cart</li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Manage Strains</h1>
+        <div class="form-section">
+            <h2>Add New Strain</h2>
+            <form id="add-strain-form">
+                <label for="strain-name">Name:</label>
+                <input type="text" id="strain-name" name="strain-name" required>
+                <label for="producer">Producer:</label>
+                <input type="text" id="producer" name="producer" required>
+                <label for="price">Price per gram:</label>
+                <input type="number" id="price" name="price" min="10" max="34" required>
+                <label for="type">Type:</label>
+                <select id="type" name="type" required>
+                    <option value="Hybrid">Hybrid</option>
+                    <option value="Sativa">Sativa</option>
+                    <option value="Indica">Indica</option>
+                </select>
+                <label for="thc">THC Level (%):</label>
+                <input type="number" id="thc" name="thc" min="8" max="34" required>
+                <label for="pharmacy">Pharmacy:</label>
+                <select id="pharmacy" name="pharmacy" required>
+                    <option value="Jiroo">Jiroo</option>
+                    <option value="Sanvivo Apotheke">Sanvivo Apotheke</option>
+                    <option value="Einhorn-Apotheke">Einhorn-Apotheke</option>
+                </select>
+                <label for="image">Image URL:</label>
+                <input type="url" id="image" name="image" required>
+                <button type="submit">Add Strain</button>
+            </form>
+        </div>
+        <div class="form-section">
+            <h2>Remove Strain</h2>
+            <form id="remove-strain-form">
+                <label for="strain-name-remove">Name:</label>
+                <input type="text" id="strain-name-remove" name="strain-name-remove" required>
+                <button type="submit">Remove Strain</button>
+            </form>
+        </div>
+    </main>
+    <script src="manage-strains.js"></script>
+</body>
+</html>

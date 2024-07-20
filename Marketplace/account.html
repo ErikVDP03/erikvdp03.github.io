@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <div class="menu-icon" onclick="toggleMenu()">☰</div>
+            <div class="search-bar">
+                <input type="text" id="search-bar" placeholder="Search strains..." oninput="searchStrains()">
+            </div>
+            <div class="cart-icon" onclick="viewCart()">🛒</div>
+        </div>
+        <nav id="menu" class="menu">
+            <ul>
+                <li onclick="viewAccount()">Account</li>
+                <li onclick="viewCart()">Shopping Cart</li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Account</h1>
+        <div class="account-section">
+            <h2>Create Account</h2>
+            <form id="create-account">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Create Account</button>
+            </form>
+        </div>
+        <div class="account-section">
+            <h2>Login</h2>
+            <form id="login">
+                <label for="login-username">Username:</label>
+                <input type="text" id="login-username" name="login-username" required>
+                <label for="login-password">Password:</label>
+                <input type="password" id="login-password" name="login-password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </main>
+    <script src="scripts.js"></script>
+</body>
+</html>
